@@ -31,13 +31,22 @@ async function fetchRecords() {
   return records;
 }
 
+function normalizeSlug(str) {
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/_/g, "-")
+    .replace(/-+$/, "")
+    .toLowerCase();
+}
+
 async function main() {
   console.log("Fetching published records from Airtable...");
   const records = await fetchRecords();
 
   const niches = records.map((r) => ({
     id: r.fields.ID_Registro || "",
-    slug: r.fields.Slug || "",
+    slug: normalizeSlug(r.fields.Slug || ""),
     nicho: r.fields.Nicho || "",
     cidade: r.fields.Cidade || "",
     headline: r.fields.Headline_Dinamica || "",

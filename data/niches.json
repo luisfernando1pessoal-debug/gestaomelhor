@@ -1,7 +1,7 @@
 [
   {
     "id": "personal_trainer-porto-alegre",
-    "slug": "personal_trainer-porto-alegre",
+    "slug": "personal-trainer-porto-alegre",
     "nicho": "Personal_Trainer",
     "cidade": "Porto Alegre",
     "headline": "Lote sua Agenda de Personal em Porto Alegre",
@@ -49,7 +49,7 @@
   },
   {
     "id": "advocacia",
-    "slug": "advocacia-",
+    "slug": "advocacia",
     "nicho": "Advocacia",
     "cidade": "",
     "headline": "Mais Clientes para seu Escritório de Advocacia",
@@ -85,7 +85,7 @@
   },
   {
     "id": "contabilidade",
-    "slug": "contabilidade-",
+    "slug": "contabilidade",
     "nicho": "Contabilidade",
     "cidade": "",
     "headline": "Escale seu Escritório de Contabilidade",
@@ -109,7 +109,7 @@
   },
   {
     "id": "psicologo-são-paulo",
-    "slug": "psicologo-são-paulo",
+    "slug": "psicologo-sao-paulo",
     "nicho": "Psicologo",
     "cidade": "São Paulo",
     "headline": "Mais Pacientes para seu Consultório em São Paulo",
@@ -121,7 +121,7 @@
   },
   {
     "id": "contabilidade-são-paulo",
-    "slug": "contabilidade-são-paulo",
+    "slug": "contabilidade-sao-paulo",
     "nicho": "Contabilidade",
     "cidade": "São Paulo",
     "headline": "Escale seu Escritório de Contabilidade em São Paulo",
@@ -133,7 +133,7 @@
   },
   {
     "id": "personal_trainer-belo-horizonte",
-    "slug": "personal_trainer-belo-horizonte",
+    "slug": "personal-trainer-belo-horizonte",
     "nicho": "Personal_Trainer",
     "cidade": "Belo Horizonte",
     "headline": "Lote sua Agenda de Personal em Belo Horizonte",
@@ -145,7 +145,7 @@
   },
   {
     "id": "clinica-estetica",
-    "slug": "clinica_estetica-",
+    "slug": "clinica-estetica",
     "nicho": "Clinica_Estetica",
     "cidade": "",
     "headline": "Agenda Lotada para sua Clínica de Estética",
@@ -157,7 +157,7 @@
   },
   {
     "id": "clinica_estetica-porto-alegre",
-    "slug": "clinica_estetica-porto-alegre",
+    "slug": "clinica-estetica-porto-alegre",
     "nicho": "Clinica_Estetica",
     "cidade": "Porto Alegre",
     "headline": "Clínica de Estética Lotada em Porto Alegre",
@@ -193,7 +193,7 @@
   },
   {
     "id": "arquiteto",
-    "slug": "arquiteto-",
+    "slug": "arquiteto",
     "nicho": "Arquiteto",
     "cidade": "",
     "headline": "Mais Projetos para seu Escritório de Arquitetura",
@@ -205,7 +205,7 @@
   },
   {
     "id": "fotografo_casamento-rio-de-janeiro",
-    "slug": "fotografo_casamento-rio-de-janeiro",
+    "slug": "fotografo-casamento-rio-de-janeiro",
     "nicho": "Fotografo_Casamento",
     "cidade": "Rio de Janeiro",
     "headline": "Mais Casamentos Fechados em Rio de Janeiro",
@@ -229,7 +229,7 @@
   },
   {
     "id": "advocacia-são-paulo",
-    "slug": "advocacia-são-paulo",
+    "slug": "advocacia-sao-paulo",
     "nicho": "Advocacia",
     "cidade": "São Paulo",
     "headline": "Mais Clientes para seu Escritório de Advocacia em São Paulo",
@@ -289,7 +289,7 @@
   },
   {
     "id": "veterinario-são-paulo",
-    "slug": "veterinario-são-paulo",
+    "slug": "veterinario-sao-paulo",
     "nicho": "Veterinario",
     "cidade": "São Paulo",
     "headline": "Clínica Veterinária Movimentada em São Paulo",
@@ -337,7 +337,7 @@
   },
   {
     "id": "clinica_estetica-curitiba",
-    "slug": "clinica_estetica-curitiba",
+    "slug": "clinica-estetica-curitiba",
     "nicho": "Clinica_Estetica",
     "cidade": "Curitiba",
     "headline": "Clínica de Estética Lotada em Curitiba",
@@ -349,7 +349,7 @@
   },
   {
     "id": "personal_trainer-rio-de-janeiro",
-    "slug": "personal_trainer-rio-de-janeiro",
+    "slug": "personal-trainer-rio-de-janeiro",
     "nicho": "Personal_Trainer",
     "cidade": "Rio de Janeiro",
     "headline": "Lote sua Agenda de Personal em Rio de Janeiro",
@@ -361,7 +361,7 @@
   },
   {
     "id": "imobiliaria",
-    "slug": "imobiliaria-",
+    "slug": "imobiliaria",
     "nicho": "Imobiliaria",
     "cidade": "",
     "headline": "Venda Mais Imóveis com Automação Inteligente",
@@ -373,7 +373,7 @@
   },
   {
     "id": "fotografo-casamento",
-    "slug": "fotografo_casamento-",
+    "slug": "fotografo-casamento",
     "nicho": "Fotografo_Casamento",
     "cidade": "",
     "headline": "Mais Casamentos Fechados por Mês",
@@ -385,7 +385,7 @@
   },
   {
     "id": "psicologo",
-    "slug": "psicologo-",
+    "slug": "psicologo",
     "nicho": "Psicologo",
     "cidade": "",
     "headline": "Mais Pacientes para seu Consultório de Psicologia",
@@ -397,7 +397,7 @@
   },
   {
     "id": "veterinario",
-    "slug": "veterinario-",
+    "slug": "veterinario",
     "nicho": "Veterinario",
     "cidade": "",
     "headline": "Clínica Veterinária Sempre Movimentada",
@@ -457,7 +457,7 @@
   },
   {
     "id": "fotografo_casamento-curitiba",
-    "slug": "fotografo_casamento-curitiba",
+    "slug": "fotografo-casamento-curitiba",
     "nicho": "Fotografo_Casamento",
     "cidade": "Curitiba",
     "headline": "Mais Casamentos Fechados em Curitiba",
@@ -469,7 +469,7 @@
   },
   {
     "id": "fotografo_casamento-belo-horizonte",
-    "slug": "fotografo_casamento-belo-horizonte",
+    "slug": "fotografo-casamento-belo-horizonte",
     "nicho": "Fotografo_Casamento",
     "cidade": "Belo Horizonte",
     "headline": "Mais Casamentos Fechados em Belo Horizonte",
@@ -493,7 +493,7 @@
   },
   {
     "id": "fotografo_casamento-são-paulo",
-    "slug": "fotografo_casamento-são-paulo",
+    "slug": "fotografo-casamento-sao-paulo",
     "nicho": "Fotografo_Casamento",
     "cidade": "São Paulo",
     "headline": "Mais Casamentos Fechados em São Paulo",
@@ -505,7 +505,7 @@
   },
   {
     "id": "odontologia-são-paulo",
-    "slug": "odontologia-são-paulo",
+    "slug": "odontologia-sao-paulo",
     "nicho": "Odontologia",
     "cidade": "São Paulo",
     "headline": "Consultório Odontológico Sempre Lotado em São Paulo",
@@ -517,7 +517,7 @@
   },
   {
     "id": "imobiliaria-são-paulo",
-    "slug": "imobiliaria-são-paulo",
+    "slug": "imobiliaria-sao-paulo",
     "nicho": "Imobiliaria",
     "cidade": "São Paulo",
     "headline": "Venda Mais Imóveis em São Paulo com Automação",
@@ -553,7 +553,7 @@
   },
   {
     "id": "odontologia",
-    "slug": "odontologia-",
+    "slug": "odontologia",
     "nicho": "Odontologia",
     "cidade": "",
     "headline": "Consultório Sempre Lotado com Automação",
@@ -565,7 +565,7 @@
   },
   {
     "id": "clinica_estetica-rio-de-janeiro",
-    "slug": "clinica_estetica-rio-de-janeiro",
+    "slug": "clinica-estetica-rio-de-janeiro",
     "nicho": "Clinica_Estetica",
     "cidade": "Rio de Janeiro",
     "headline": "Clínica de Estética Lotada em Rio de Janeiro",
@@ -577,7 +577,7 @@
   },
   {
     "id": "personal-trainer",
-    "slug": "personal_trainer-",
+    "slug": "personal-trainer",
     "nicho": "Personal_Trainer",
     "cidade": "",
     "headline": "Lote sua Agenda de Personal Trainer",
@@ -589,7 +589,7 @@
   },
   {
     "id": "personal_trainer-curitiba",
-    "slug": "personal_trainer-curitiba",
+    "slug": "personal-trainer-curitiba",
     "nicho": "Personal_Trainer",
     "cidade": "Curitiba",
     "headline": "Lote sua Agenda de Personal em Curitiba",
@@ -613,7 +613,7 @@
   },
   {
     "id": "arquiteto-são-paulo",
-    "slug": "arquiteto-são-paulo",
+    "slug": "arquiteto-sao-paulo",
     "nicho": "Arquiteto",
     "cidade": "São Paulo",
     "headline": "Mais Projetos de Arquitetura em São Paulo",
@@ -625,7 +625,7 @@
   },
   {
     "id": "personal_trainer-são-paulo",
-    "slug": "personal_trainer-são-paulo",
+    "slug": "personal-trainer-sao-paulo",
     "nicho": "Personal_Trainer",
     "cidade": "São Paulo",
     "headline": "Lote sua Agenda de Personal em São Paulo",
@@ -649,7 +649,7 @@
   },
   {
     "id": "clinica_estetica-são-paulo",
-    "slug": "clinica_estetica-são-paulo",
+    "slug": "clinica-estetica-sao-paulo",
     "nicho": "Clinica_Estetica",
     "cidade": "São Paulo",
     "headline": "Clínica de Estética Lotada em São Paulo",
@@ -673,7 +673,7 @@
   },
   {
     "id": "fotografo_casamento-porto-alegre",
-    "slug": "fotografo_casamento-porto-alegre",
+    "slug": "fotografo-casamento-porto-alegre",
     "nicho": "Fotografo_Casamento",
     "cidade": "Porto Alegre",
     "headline": "Mais Casamentos Fechados em Porto Alegre",
@@ -697,7 +697,7 @@
   },
   {
     "id": "clinica_estetica-belo-horizonte",
-    "slug": "clinica_estetica-belo-horizonte",
+    "slug": "clinica-estetica-belo-horizonte",
     "nicho": "Clinica_Estetica",
     "cidade": "Belo Horizonte",
     "headline": "Clínica de Estética Lotada em Belo Horizonte",
