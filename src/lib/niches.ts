@@ -456,10 +456,89 @@ export const niches: NicheData[] = [
   }
 ];
 
+// Airtable record shape
+interface AirtableNiche {
+  id: string;
+  slug: string;
+  nicho: string;
+  cidade: string;
+  headline: string;
+  dor: string;
+  beneficio: string;
+  linkAfiliado: string;
+  snapshotBonus: string;
+  metaDescription: string;
+}
+
+// Map Airtable nicho names to base template slugs
+const NICHO_TO_SLUG: Record<string, string> = {
+  Clinica_Estetica: "clinicas-estetica",
+  Advocacia: "escritorios-advocacia",
+  Imobiliaria: "imobiliarias",
+  Odontologia: "consultorios-odontologia",
+  Contabilidade: "escritorios-contabilidade",
+  Fotografo_Casamento: "fotografos-casamento",
+  Personal_Trainer: "personal-trainers",
+  Psicologo: "psicologos",
+  Veterinario: "clinicas-veterinarias",
+  Arquiteto: "escritorios-arquitetura",
+};
+
+function loadAirtableData(): AirtableNiche[] {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    return require("../../data/niches.json") as AirtableNiche[];
+  } catch {
+    return [];
+  }
+}
+
 export function getNicheBySlug(slug: string): NicheData | undefined {
-  return niches.find((n) => n.slug === slug);
+  // First check if there's a direct match in base templates
+  const baseMatch = niches.find((n) => n.slug === slug);
+  if (baseMatch) {
+    // Check if Airtable has overrides for this base niche
+    const airtableData = loadAirtableData();
+    const override = airtableData.find((a) => NICHO_TO_SLUG[a.nicho] === slug);
+    if (override) {
+      return mergeNicheData(baseMatch, override);
+    }
+    return baseMatch;
+  }
+
+  // Check if slug matches an Airtable city-specific page
+  const airtableData = loadAirtableData();
+  const airtableMatch = airtableData.find((a) => a.slug === slug);
+  if (airtableMatch) {
+    const baseSlug = NICHO_TO_SLUG[airtableMatch.nicho];
+    const baseTemplate = niches.find((n) => n.slug === baseSlug);
+    if (baseTemplate) {
+      return mergeNicheData(baseTemplate, airtableMatch);
+    }
+  }
+
+  return undefined;
+}
+
+function mergeNicheData(base: NicheData, override: AirtableNiche): NicheData {
+  return {
+    ...base,
+    slug: override.slug || base.slug,
+    heroTitle: override.headline || base.heroTitle,
+    painDetail: override.dor || base.painDetail,
+    solution: override.beneficio || base.solution,
+    name: override.cidade
+      ? `${base.name} em ${override.cidade}`
+      : base.name,
+    heroSubtitle: override.metaDescription || base.heroSubtitle,
+  };
 }
 
 export function getAllNicheSlugs(): string[] {
-  return niches.map((n) => n.slug);
+  const baseSlugs = niches.map((n) => n.slug);
+  const airtableData = loadAirtableData();
+  const airtableSlugs = airtableData
+    .map((a) => a.slug)
+    .filter((s) => s && !baseSlugs.includes(s));
+  return [...baseSlugs, ...airtableSlugs];
 }
