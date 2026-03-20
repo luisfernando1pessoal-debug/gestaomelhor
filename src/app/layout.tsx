@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "Compare as melhores soluções de CRM, automação e gestão para seu negócio. Análises detalhadas.",
   robots: "index, follow",
+  verification: {
+    google: "W7APrQAYdIUYTNVT-FRzSb37BCK48VqUvxHMeTblb8g",
+  },
 };
 
 export default function RootLayout({
