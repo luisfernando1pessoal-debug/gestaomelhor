@@ -10,7 +10,12 @@ interface ExitIntentPopupProps {
 
 export default function ExitIntentPopup({ slug, nicho }: ExitIntentPopupProps) {
   const [show, setShow] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+  const [dismissed, setDismissed] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("lead-captured") === "1";
+    }
+    return false;
+  });
 
   // Listen for lead captured event from inline form
   useEffect(() => {

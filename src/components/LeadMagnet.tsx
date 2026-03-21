@@ -50,6 +50,7 @@ export default function LeadMagnet({ slug, nicho, origem = "Inline", onSuccess }
       });
       if (res.ok) {
         setStatus("success");
+        localStorage.setItem("lead-captured", "1");
         window.dispatchEvent(new Event("lead-captured"));
         onSuccess?.();
       } else {
