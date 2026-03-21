@@ -486,6 +486,17 @@ export const niches: NicheData[] = [
   }
 ];
 
+// City page shape from all-pages.json
+interface CityPage {
+  slug: string;
+  baseSlug: string;
+  nicheLabel: string;
+  city: string;
+  state: string;
+  title: string;
+  description: string;
+}
+
 // Airtable record shape
 interface AirtableNiche {
   id: string;
@@ -514,6 +525,15 @@ const NICHO_TO_SLUG: Record<string, string> = {
   Arquiteto: "escritorios-arquitetura",
 };
 
+function loadCityPages(): CityPage[] {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    return require("../../data/all-pages.json") as CityPage[];
+  } catch {
+    return [];
+  }
+}
+
 function loadAirtableData(): AirtableNiche[] {
   try {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -523,11 +543,15 @@ function loadAirtableData(): AirtableNiche[] {
   }
 }
 
+export function getCityPageBySlug(slug: string): CityPage | undefined {
+  const cityPages = loadCityPages();
+  return cityPages.find((p) => p.slug === slug);
+}
+
 export function getNicheBySlug(slug: string): NicheData | undefined {
-  // First check if there's a direct match in base templates
+  // 1. Direct match in base templates
   const baseMatch = niches.find((n) => n.slug === slug);
   if (baseMatch) {
-    // Check if Airtable has overrides for this base niche
     const airtableData = loadAirtableData();
     const override = airtableData.find((a) => NICHO_TO_SLUG[a.nicho] === slug);
     if (override) {
@@ -536,7 +560,22 @@ export function getNicheBySlug(slug: string): NicheData | undefined {
     return baseMatch;
   }
 
-  // Check if slug matches an Airtable city-specific page
+  // 2. Check city pages (all-pages.json)
+  const cityPage = getCityPageBySlug(slug);
+  if (cityPage) {
+    const baseTemplate = niches.find((n) => n.slug === cityPage.baseSlug);
+    if (baseTemplate) {
+      return {
+        ...baseTemplate,
+        slug: cityPage.slug,
+        heroTitle: baseTemplate.heroTitle.replace(/\.$/, "") + ` em ${cityPage.city}`,
+        heroSubtitle: baseTemplate.heroSubtitle,
+        name: `${cityPage.nicheLabel} em ${cityPage.city}`,
+      };
+    }
+  }
+
+  // 3. Check Airtable city-specific pages
   const airtableData = loadAirtableData();
   const airtableMatch = airtableData.find((a) => a.slug === slug);
   if (airtableMatch) {
@@ -562,9 +601,11 @@ function mergeNicheData(base: NicheData, override: AirtableNiche): NicheData {
 
 export function getAllNicheSlugs(): string[] {
   const baseSlugs = niches.map((n) => n.slug);
+  const cityPages = loadCityPages();
+  const citySlugs = cityPages.map((p) => p.slug);
   const airtableData = loadAirtableData();
   const airtableSlugs = airtableData
     .filter((a) => a.slug)
     .map((a) => a.slug);
-  return Array.from(new Set([...baseSlugs, ...airtableSlugs]));
+  return Array.from(new Set([...baseSlugs, ...citySlugs, ...airtableSlugs]));
 }

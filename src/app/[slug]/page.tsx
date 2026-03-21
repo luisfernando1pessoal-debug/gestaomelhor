@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import {
   getNicheBySlug,
   getAllNicheSlugs,
+  getCityPageBySlug,
   AFFILIATE_LINK,
 } from "@/lib/niches";
 import LeadMagnet from "@/components/LeadMagnet";
@@ -19,9 +20,12 @@ export function generateMetadata({
 }): Metadata {
   const niche = getNicheBySlug(params.slug);
   if (!niche) return {};
+  const cityPage = getCityPageBySlug(params.slug);
+  const title = cityPage ? cityPage.title : `${niche.heroTitle} | ${niche.name}`;
+  const description = cityPage ? cityPage.description : niche.painDetail.slice(0, 155) + "...";
   return {
-    title: `${niche.heroTitle} | ${niche.name}`,
-    description: niche.painDetail.slice(0, 155) + "...",
+    title,
+    description,
     openGraph: {
       title: niche.heroTitle,
       description: niche.heroSubtitle,
