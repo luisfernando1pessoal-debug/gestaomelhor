@@ -12,6 +12,13 @@ export default function ExitIntentPopup({ slug, nicho }: ExitIntentPopupProps) {
   const [show, setShow] = useState(false);
   const [dismissed, setDismissed] = useState(false);
 
+  // Listen for lead captured event from inline form
+  useEffect(() => {
+    const handler = () => setDismissed(true);
+    window.addEventListener("lead-captured", handler);
+    return () => window.removeEventListener("lead-captured", handler);
+  }, []);
+
   useEffect(() => {
     if (dismissed) return;
 
