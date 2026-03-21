@@ -146,7 +146,7 @@ export default function NichePage({ params }: { params: { slug: string } }) {
                 </svg>
               </span>
               <h2 className="font-display text-[22px] font-700 text-red-600">
-                Você se identifica com isso?
+                Isso está acontecendo com você agora?
               </h2>
             </div>
             <p className="text-[16px] leading-[1.8] text-red-950/70">
@@ -163,7 +163,7 @@ export default function NichePage({ params }: { params: { slug: string } }) {
                 A solução
               </p>
               <h2 className="animate-fade-up stagger-2 mb-5 font-display text-[clamp(1.5rem,3vw,2.4rem)] font-700 tracking-[-0.02em] text-[var(--text)] text-balance">
-                Tudo que seu negócio precisa em uma plataforma
+                E se tudo isso se resolvesse com um único sistema?
               </h2>
               <p className="animate-fade-up stagger-3 mx-auto max-w-[560px] text-[17px] leading-[1.7] text-[var(--text-secondary)]">
                 {niche.solution}
@@ -197,7 +197,7 @@ export default function NichePage({ params }: { params: { slug: string } }) {
               Comparativo
             </p>
             <h2 className="font-display text-[clamp(1.5rem,3vw,2.4rem)] font-700 tracking-[-0.02em] text-[var(--text)]">
-              Antes vs. Depois
+              A diferença entre quem cresce e quem estagna
             </h2>
           </div>
 
@@ -337,10 +337,10 @@ export default function NichePage({ params }: { params: { slug: string } }) {
 
           <div className="relative mx-auto max-w-[640px]">
             <h2 className="mb-5 font-display text-[clamp(1.6rem,4vw,2.8rem)] font-800 tracking-[-0.02em] text-white text-balance">
-              Pronto para transformar seu negócio?
+              Você leu até aqui. Isso diz algo sobre você.
             </h2>
             <p className="mb-10 text-[18px] leading-[1.7] text-white/60">
-              Comece agora com 14 dias grátis. Veja resultados antes de pagar.
+              A maioria vai fechar essa página e continuar fazendo tudo manual. Você pode ser diferente. 14 dias grátis. Sem risco. Sem cartão.
             </p>
 
             <a
@@ -349,7 +349,7 @@ export default function NichePage({ params }: { params: { slug: string } }) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-white px-10 py-4 font-display text-[16px] font-600 text-[var(--text)] shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
             >
-              Começar teste grátis
+              Quero meus 14 dias grátis
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -371,7 +371,7 @@ export default function NichePage({ params }: { params: { slug: string } }) {
               FAQ
             </p>
             <h2 className="font-display text-[clamp(1.5rem,3vw,2.2rem)] font-700 tracking-[-0.02em] text-[var(--text)]">
-              Perguntas frequentes
+              Ainda tem dúvidas? Normal.
             </h2>
           </div>
 
