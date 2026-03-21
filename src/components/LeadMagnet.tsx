@@ -64,11 +64,16 @@ export default function LeadMagnet({ slug, nicho, origem = "Inline", onSuccess }
       <div className="glass-card mx-auto max-w-lg p-8 text-center">
         <div className="mb-4 text-4xl">&#10003;</div>
         <h3 className="font-display text-xl font-700 text-[var(--text)]">
-          Pronto! Verifique seu e-mail.
+          Pronto! Seu guia está liberado.
         </h3>
-        <p className="mt-2 text-sm text-[var(--text-secondary)]">
-          Enviamos o material para o contato informado.
-        </p>
+        <a
+          href="/guia-empresa-automatizada.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-block rounded-xl bg-[var(--accent)] px-6 py-3 text-sm font-600 text-white shadow-lg transition-all hover:opacity-90"
+        >
+          Baixar Guia Gratuito (PDF)
+        </a>
       </div>
     );
   }
