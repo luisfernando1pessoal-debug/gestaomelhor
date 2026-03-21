@@ -44,11 +44,29 @@ export default function NichePage({ params }: { params: { slug: string } }) {
     })),
   };
 
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: `${niche.name} CRM & Automação`,
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web-based",
+    description: niche.painDetail,
+    offers: {
+      "@type": "Offer",
+      price: "97.00",
+      priceCurrency: "USD",
+    },
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
       <main className="min-h-screen bg-[var(--bg)]">
