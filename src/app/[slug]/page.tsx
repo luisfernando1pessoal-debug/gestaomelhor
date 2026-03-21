@@ -5,6 +5,8 @@ import {
   getAllNicheSlugs,
   AFFILIATE_LINK,
 } from "@/lib/niches";
+import LeadMagnet from "@/components/LeadMagnet";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 export function generateStaticParams() {
   return getAllNicheSlugs().map((slug) => ({ slug }));
@@ -400,6 +402,11 @@ export default function NichePage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
+        {/* ─── LEAD MAGNET ─── */}
+        <section className="px-6 py-16">
+          <LeadMagnet slug={niche.slug} nicho={niche.name} />
+        </section>
+
         {/* ─── FOOTER ─── */}
         <footer className="border-t border-[var(--border)] bg-[var(--bg-soft)] px-6 py-10 text-center text-[13px] leading-relaxed text-[var(--text-muted)]">
           <p className="mb-1">
@@ -412,6 +419,8 @@ export default function NichePage({ params }: { params: { slug: string } }) {
           </p>
         </footer>
       </main>
+
+      <ExitIntentPopup slug={niche.slug} nicho={niche.name} />
     </>
   );
 }
